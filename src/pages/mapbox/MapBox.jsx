@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 import RestaurantsFilter from "./components/restaurants/components/restaurants-filter/RestaurantsFilter";
 import RestaurantsList from "./components/restaurants/components/restaurants-list/RestaurantsList";
+import Map from "./components/map/Map";
 
 import { useMapBox } from "./useMapBox";
 
@@ -16,7 +17,7 @@ function MapBox() {
             <Grid item xs={7} style={{
                 border: '1px solid red'
             }}>
-                <h1>Map</h1>
+                <Map restaurants={restaurants} selected={selected} />
             </Grid>
             <Grid item xs={5} style={{
                 border: '1px solid blue',
