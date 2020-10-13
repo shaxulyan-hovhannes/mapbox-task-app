@@ -42,16 +42,6 @@ function Map(props) {
                    zoom={2}
                    doubleClickZoom
                    ref={_map}
-                   dragPan
-                   dragRotate
-                   boxZoom
-                   antialias
-                   collectResourceTiming
-                   crossSourceCollisions
-                   failIfMajorPerformanceCaveat
-                   hash
-                   keyboard
-                   localIdeographFontFamily
     >
         {
             (restaurants || []).map((restaurant, index) => (
