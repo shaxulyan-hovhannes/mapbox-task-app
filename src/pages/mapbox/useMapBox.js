@@ -17,7 +17,7 @@ export function useMapBox() {
 
     const {restaurants, selected} = useMemo(() => restaurantsList, [restaurantsList]);
 
-    const restaruantsData = (restaurants || []).map(item => [item.title, item.description, item.rating, 'coords', item.id]);
+    const restaruantsData = (restaurants || []).map(item => [item?.title, item?.description, item?.rating, 'coords', item?.id]);
 
     const getRestaurantsAction = useCallback(() => dispatch(getRestaurants()), [dispatch]);
     const selectRestaurantAction = useCallback((_, row) => {

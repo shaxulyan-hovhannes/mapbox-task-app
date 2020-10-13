@@ -2,6 +2,7 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
+import RestaurantsFilter from "./components/restaurants/components/restaurants-filter/RestaurantsFilter";
 import RestaurantsList from "./components/restaurants/components/restaurants-list/RestaurantsList";
 
 import { useMapBox } from "./useMapBox";
@@ -20,7 +21,7 @@ function MapBox() {
             <Grid item xs={5} style={{
                 border: '1px solid blue',
             }}>
-                <h1>Filter</h1>
+                <RestaurantsFilter />
                 <RestaurantsList restaurants={restaurants}
                                  restaruantsData={restaruantsData}
                                  tableOptions={tableOptions}
