@@ -15,7 +15,7 @@ export const restaurantsData = [
     {
         id: 3,
         title: 'Pizza Hut',
-        rating: 5,
+        rating: 4,
         description: 'Fast food'
     }
 ];
