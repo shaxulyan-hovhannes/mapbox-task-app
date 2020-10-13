@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { Provider } from 'react-redux';
+import reduxStore from "./store/storeConfig";
+
 ReactDOM.render(
+    <Provider store={reduxStore}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+    </Provider>,
   document.getElementById('root')
 );
 
