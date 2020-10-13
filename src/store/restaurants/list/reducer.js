@@ -19,7 +19,7 @@ const restaurantsActions = {
         ...state,
         restaurantsList: {
             ...state.restaurantsList,
-            selected,
+            selected: state.restaurantsList.selected === selected ? null : selected,
         }
     })
 };
