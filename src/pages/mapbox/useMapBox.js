@@ -17,16 +17,16 @@ export function useMapBox() {
 
     const {restaurants, selected} = useMemo(() => restaurantsList, [restaurantsList]);
 
-    const restaruantsData = (restaurants || []).map(item => [item?.title, item?.description, item?.rating, 'coords', item?.id]);
+    const restaruantsData = (restaurants || []).map(item => [item.id, item?.title, item?.description, item?.rating, item.coordinates.join(',')]);
 
     const getRestaurantsAction = useCallback(() => dispatch(getRestaurants()), [dispatch]);
-    const selectRestaurantAction = useCallback((_, row) => {
-        dispatch(selectRestaurant(restaurantsData[row.rowIndex].id));
+    const selectRestaurantAction = useCallback(data => {
+        dispatch(selectRestaurant(parseInt(data[0])))
     }, [dispatch]);
 
     const tableOptions = useMemo(() => ({
         ...OPTIONS,
-        onCellClick: selectRestaurantAction,
+        onRowClick: selectRestaurantAction,
 
     }), [selectRestaurantAction]);
 
