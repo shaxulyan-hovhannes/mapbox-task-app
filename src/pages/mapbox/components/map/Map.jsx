@@ -39,7 +39,7 @@ function Map(props) {
                    accessToken={MAPBOX_ACCESS_TOKEN}
                    latitude={40.177200}
                    longitude={44.503490}
-                   zoom={2}
+                   zoom={4}
                    doubleClickZoom
                    ref={_map}
     >
