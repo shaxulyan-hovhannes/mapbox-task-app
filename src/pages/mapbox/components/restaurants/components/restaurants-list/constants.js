@@ -1,4 +1,9 @@
-const COLUMNS = ['Title', 'Description', 'Rating', 'Coordinates'];
+const COLUMNS = [{
+    name: 'id',
+    options: {
+        display: false,
+    }
+}, 'Title', 'Description', 'Rating', 'Coordinates'];
 
 const OPTIONS = {
     search: false,
